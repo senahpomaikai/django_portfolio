@@ -1,0 +1,57 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}Senah Park{% endblock %}
+{% block content %}
+<style>
+
+    .inter-light {
+        font-family: Inter;
+    }
+</style>
+
+<section style="height: 60vh;">
+    <div class="h-25"></div>
+    <div class="row">
+        <div class="col-12">
+            <div class="row ms-1 ps-5">
+                <div class="col-12 contact-welcome font-weight-bold"><span class="inter-light font-weight-bold">It's nice to meet you.</span></div>
+            </div>
+            <div class="row ms-1 mt-2 ps-5">
+                <div class="col-12 inter-light font-weight-bold">Let’s work together!</div>
+            </div>
+            <div class="row mt-2 ps-5">
+                <div class="col-3">
+                    <div class="card" style="background-color: transparent; border: none;">
+                        <div class="card-body">
+                        <h5 class="card-title inter-light text-nowrap">Send me an email</h5>
+                        <p class="card-text inter-light"><a href="mailto:senahparkkearl@gmail.com" class="text-decoration-none">senahparkkearl@gmail.com</a></p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card" style="background-color: transparent; border: none;">
+                        <div class="card-body">
+                        <h5 class="card-title inter-light text-nowrap">Message me on instagram</h5>
+                        <p class="card-text inter-light"><a href="{% url 'instagram' %}" class="text-decoration-none">instagram.com/senahpomaikai</a></p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card" style="background-color: transparent; border: none;">
+                        <div class="card-body">
+                        <h5 class="card-title inter-light text-nowrap">Connect with me on linkedin</h5>
+                        <p class="card-text inter-light"><a href="{% url 'linkedin'%}" class="text-decoration-none">linkedin.com/in/senah-park-kearl</a></p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</section>
+
+{% endblock %}

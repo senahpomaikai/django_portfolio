@@ -1,0 +1,109 @@
+ul.contact li a.social {
+    color: rgba(0,16,36,.6);
+    position: relative;
+    display: block;
+    position: relative;
+    top: 4px;
+    padding: 0 .5rem
+}
+
+ul.contact li a.social img {
+    opacity: .4
+}
+
+ul.contact li a.social:hover img {
+    opacity: .75
+}
+
+.social-icon {
+    width: 40px;
+}
+
+
+.index-container {
+    height: inherit;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+      ". . . . ."
+      ". intro-message . other-welcome-message ."
+      ". . . . .";
+  }
+  
+  .intro-message {
+    justify-self: center;
+    align-self: center;
+    grid-area: intro-message;
+  }
+  
+  .other-welcome-message {
+    justify-self: center;
+    align-self: center;
+    grid-area: other-welcome-message;
+  }
+
+#hi-img {
+    opacity: 0;
+    transform: translateY(-80px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+#other-welcome-message {
+    opacity: 0;
+    transform: translateY(-80px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+  
+.fadeInCard {
+    opacity: 0;
+    transform: translateY(-80px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+    background-color: var(--bs-info);
+}
+
+.fade-fp-card-1 {
+    opacity: 0;
+    transform: translateY(-80px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.fresh-pick-container { 
+    height: inherit;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 0.75fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.75fr 0.75fr 1fr 1fr 1fr 1fr 1fr 1fr 0.75fr 0.75fr;
+    gap: 0px 10px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+      ". . . . . . . . . . ."
+      ". . . . . . . . . . ."
+      ". . . . fp-card-1 fp-card-1 . . . . ."
+      ". fp-description fp-description . fp-card-1 fp-card-1 fp-card-2 fp-card-2 . . ."
+      ". fp-description fp-description . fp-card-1 fp-card-1 fp-card-2 fp-card-2 fp-card-3 fp-card-3 ."
+      ". fp-description fp-description . fp-card-1 fp-card-1 fp-card-2 fp-card-2 fp-card-3 fp-card-3 ."
+      ". fp-description fp-description . . . fp-card-2 fp-card-2 fp-card-3 fp-card-3 ."
+      ". . . . . . . . fp-card-3 fp-card-3 ."
+      ". . . . . . . . . . ."
+      ". . . . . . . . . . .";
+  }
+  
+  .fp-description { grid-area: fp-description; }
+  
+  .fp-card-1 { grid-area: fp-card-1; }
+  
+  .fp-card-2 { grid-area: fp-card-2; }
+  
+  .fp-card-3 { grid-area: fp-card-3; }
+  
+  

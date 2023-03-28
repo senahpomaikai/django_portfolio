@@ -1,0 +1,49 @@
+{% extends 'workbase.html'%}
+{% load static %}
+{% block title %}Senah Park{% endblock %}
+
+{% block hero-logo %} {% static 'img/fp/fp_logo.png' %} {% endblock %}
+
+{% block wb-hero-experience-desc %}User Experience Analysis + Redesign{% endblock %}
+
+{% block wb-hero-card-left-title %}OVERVIEW{% endblock %}
+{% block wb-hero-card-left-description %}Freshly Picked seeks to optimize their customers’ user experience (UX) on desktop and mobile devices in order to increase sale conversions.{% endblock %}
+{% block wb-hero-card-left-goal %}The key goal of this project was to identify the optimal user journey to allow first-time users to more easily navigate the site. {% endblock %}
+
+{% block wb-hero-card-right-job-role %}ROLE{% endblock %}
+{% block wb-hero-card-right-job-title %}Project Lead{% endblock %}
+{% block wb-hero-card-right-role-desc %}Current-state + competitive analysis, UX interviews, user journey mapping, visual design + flow{% endblock %}
+{% block wb-hero-card-right-date %}February 2023{% endblock %}
+
+{% block top-first-link-route %}{% url 'freshly-picked-mockup' %}{% endblock %}
+{% block top-first-link-innerhtml %}view user journey deliverable (figma){% endblock %}
+
+{% block top-second-link-route %}{% url 'freshly-picked-live' %}{% endblock %}
+{% block top-second-link-innerhtml %}view live site{% endblock %}
+
+{% block left-one-photo %} {% static 'img/fp/fp_sheets_one.png' %} {% endblock %}
+{% block left-one-card-title %}Current State Site Analysis{% endblock %}
+{% block left-one-card-description %}To best understand the company and its offerings, it was important to perform a current state analysis of their site on mobile and desktop to identify areas of improvement. A comprehensive bug list started as a foundation for the rest of the project.{% endblock %}
+
+{% block right-one-photo %} {% static 'img/fp/fp_interviews.png' %} {% endblock %}
+{% block right-one-card-title %}User Experience Interviews{% endblock %}
+{% block right-one-card-description %}The target demographic of Freshly Picked have unique priorities and behaviors. We met with nine people who fit this ideal market and conducted in-depth interviews to observe their experience with the site. The data collected shaped the improved user journey.{% endblock %}
+
+{% block left-two-photo %} {% static 'img/fp/whiteboard.jpg' %} {% endblock %}
+{% block left-two-card-title %}Whiteboard Wireframe Session{% endblock %}
+{% block left-two-card-description %}Before diving into visual assets, it was necessary to create a solid foundation to ensure functionality. As a team, we brainstormed the optimal user flow for each of the main product categories. For each category, the goal was to enable the user to respond to a conversion CTA within three clicks.{% endblock %}
+
+{% block right-two-photo %} {% static 'img/fp/fp_flows.png' %} {% endblock %}
+{% block right-two-card-title %}User Journey Flow Mockup{% endblock %}
+{% block right-two-card-description %}With the flows defined for each category, I designed mockups and a sitemap that allows Freshly Picked to adapt to their wide range of product offerings. The links below lead to an interactive mock user journey, as well as the live site that incorporates our recommendations.{% endblock %}
+
+{% block bottom-first-link-route %}{% url 'freshly-picked-mockup' %}{% endblock %}
+{% block bottom-first-link-innerhtml %}view user journey deliverable (figma){% endblock %}
+
+{% block bottom-second-link-route %}{% url 'freshly-picked-live' %}{% endblock %}
+{% block bottom-second-link-innerhtml %}view live site{% endblock %}
+
+{% block content %}
+
+
+{% endblock %}

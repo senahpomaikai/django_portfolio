@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}Senah Park{% endblock %}
+{% block content %}
+<style>
+
+    .inter-light {
+        font-family: Inter;
+    }
+</style>
+
+<section style="height: 65vh;">
+    <div class="about-container h-75 mb-5">
+        <div class="about-intro">
+            <div class="card h-75" style="background-color: transparent; border: none;">
+                <div class="card-body">
+                  <div class="wb-card-title inter-light text-nowrap font-weight-bold"><img src="{% static 'img/full_sig.png' %}" alt="" width="70%"></div>
+                  <h3 class="card-text inter-light text-wrap">User Experience Designer + </h3>
+                  <h3 class="card-text inter-light text-wrap">Marketing Strategist</h3>
+                  <div class="">
+                    <ul class="nav pe-3 text-decoration-none">
+                        <div class=""><li class="m-2"><a href="{% url 'contact' %}" class="btn btn-primary">Get in touch</a></li></div>
+                        <a href="{% url 'linkedin' %}" target="_blank" class="social"><div class="ms-3 social-linkedin-container"><li class="m-2"><img src="{% static 'img/icon/link-dark.png' %}" alt="LinkedIn"></li></div></a>
+                        <a href="{% url 'pinterest' %}" target="_blank" class="social"><div class="ms-3 social-pinterest-container"><li class="m-2"><img width="40px" src="{% static 'img/icon/pin-dark.png' %}" alt="Pinterest"></li></div></a>
+                        <a href="{% url 'instagram' %}" target="_blank" class="social"><div class="ms-3 social-instagram-container"><li class="m-2"><img width="40px" src="{% static 'img/icon/insta-dark.png' %}" alt="Instagram"></li></div></a>
+                        <a href="{% url 'spotify' %}" target="_blank" class="social"><div class="ms-3 social-spotify-container"><li class="m-2"><img width="40px" src="{% static 'img/icon/spot-dark.png' %}" alt="Spotify"></li></div></a>
+                      </ul>
+                </div>
+                </div>
+              </div>
+        </div>
+        <div class="about-info inter-light" style="font-size: 18px;">
+            <p class="mb-4">
+                Hi! My name is Senah, and I am a self-proclaimed professional (side) “hustler" based in UT, USA. I have always loved to create- growing up in the music world allowed me to learn the importance of being adaptable, honest, and vulnerable, because it is in this mindset that we are able to make something truly meaningful.
+            </p>
+            <p class="mb-4">
+                I specialize in data-driven + creative marketing solutions. Nothing has been more fulfilling than finding a field of study that enables me to be creative, analytical, and collaborate with incredible people. Additionally, I love floral design, board games, and pistachio-flavored everything.
+            </p>
+            <p class="mb-4">
+                Thank you so much for stopping by! Feel free to stay awhile, explore, and connect ✿
+            </p>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

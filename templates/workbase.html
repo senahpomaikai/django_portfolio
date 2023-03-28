@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="icon" type="image/png" href="{% static 'img/flower/flower2.png' %}">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/boot-css/bootstrap.css' %}" rel="stylesheet" />
+    
+</head>
+<body class="bg-light">
+    <style>
+        @font-face {
+            font-family: Inter;
+            src: url("{% static 'font/Inter-Light.ttf' %}");
+        }
+        @font-face {
+            font-family: Inter-Medium;
+            src: url("{% static 'font/Inter-Medium.ttf' %}");
+        }
+        @font-face {
+            font-family: Inter-Regular;
+            src: url("{% static 'font/Inter-Regular.ttf' %}");
+        }
+        @font-face {
+          font-family: Shrikhand;
+          src: url("{% static 'font/Shrikhand-Regular.ttf' %}");
+        }
+        body{
+            background: hsla(348, 77%, 85%, 0.2);
+
+            background: linear-gradient(225deg, hsla(348, 77%, 85%, 0.35) 0%, hsla(35, 28%, 85%, 0.35) 50%, hsla(45, 100%, 80%, 0.35) 60%);
+
+            background: -moz-linear-gradient(225deg, hsla(348, 77%, 85%, 0.35) 0%, hsla(35, 28%, 85%, 0.35) 50%, hsla(45, 100%, 80%, 0.35) 60%);
+                    
+            background: -webkit-linear-gradient(225deg, hsla(348, 77%, 85%, 0.35) 0%, hsla(35, 28%, 85%, 0.35) 50%, hsla(45, 100%, 80%, 0.35) 60%);
+                    
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F6BAC6", endColorstr="#E3DACD", GradientType=1 );
+        }
+        body nav {
+            font-family: Inter;
+        }
+        .wb-hero-major-text {
+          font-family: Inter-Regular;
+          
+        }
+        body .card .card-text{
+          font-family: Inter;
+        }
+        body footer {
+            font-family: Inter;
+        }
+        .inter-medium {
+          font-family: Inter-Medium;
+        }.inter-regular {
+          font-family: Inter-Regular;
+        }.inter-light {
+          font-family: Inter;
+        }
+    </style>
+
+  <div class="row d-flex justify-content-around bg-light">
+    <div class="col-3 ps-5">
+      <a href="{% url 'index' %}" class=""><img src="{% static 'img/newsenahsig.png' %}" class="navbar-brand" width="60%"/></a>
+    </div>
+    <div class="col-9 base-nav inter-light">
+        <ul class="base-nav-list mb-2 mb-lg-0 pe-5">
+          <li class="nav-item">
+            <a class="nav-link ms-3 base-nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-3 base-nav-link" href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-3 base-nav-link" href="{% url 'contact' %}">Contact</a>
+          </li>
+        </ul>            
+    </div>
+  </div>
+    
+
+    <section style="height:95vh;" id="wb-hero">
+      <div class="wb-hero h-100 bg-light">
+        <div class="wb-logo"><img src="{% block hero-logo %} {% endblock %}" alt="hero-logo" class="w-75"></div>
+        <div class="wb-hero-desc h-100">
+          <div class="wb-hero-links h-100">
+            <div class="">
+              <ul class="wb-hero-links-ul">
+                <li><a href="{% block top-first-link-route %}{% endblock %}" class="wb-hero-links">{% block top-first-link-innerhtml %}{% endblock %}</a></li>
+                <li><a href="{% block top-second-link-route %}{% endblock %}" target="_blank" class="wb-hero-links">{% block top-second-link-innerhtml %}{% endblock %}</a></li>
+              </ul>
+            </div>
+            
+          </div>
+          <div class="wb-hero-cards h-100">
+            <div class="wb-hero-card-left h-100">
+              <div class="card h-100" style="background-color: transparent; border: none;">
+                <div class="card-body" style="background-color: transparent; border: none;">
+                  <h5 class="card-title "> <span class="wb-hero-major-text">{% block wb-hero-card-left-title %}{% endblock %}</span></h5>
+                  <p class="card-text">{% block wb-hero-card-left-description %}{% endblock %}</p>
+                  <p class="card-text">{% block wb-hero-card-left-goal %}{% endblock %}</p>
+                </div>
+              </div>
+            </div>
+            <div class="wb-hero-card-right h-100">
+              <div class="card h-100" style="background-color: transparent; border: none;">
+                <div class="card-body" style="background-color: transparent; border: none;">
+                  <h5 class="card-title "> <span class="wb-hero-major-text">{% block wb-hero-card-right-job-role %}{% endblock %}</span></h5>
+                  <p class="card-text " style="font-weight: bold;"> <span class="font-weight-bold inter-medium">{% block wb-hero-card-right-job-title %}{% endblock %}</span></p>
+                  <p class="card-text">{% block wb-hero-card-right-role-desc %}{% endblock %}</p>
+                  <p class="card-text">{% block wb-hero-card-right-date %}{% endblock %}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wb-hero-experience-desc h-100 text-nowrap"><div class="wb-hero-experience-desc-text">{% block wb-hero-experience-desc %}{% endblock %}</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section style="height:75vh;" id="workbase-first">
+      <div class="wb-left h-100 bg-light">
+        <div class="wb-left-row h-100">
+          <div class="wb-left-photo h-100 bg-light">
+            <img src="{% block left-one-photo %} {% endblock %}" alt="first-left-photo" class="wb-section-photo h-100">
+          </div>
+          <div class="wb-left-description h-100 ">
+            <div class="card h-100" style="background-color: transparent; border: none;">
+              <div class="card-body">
+                <h5 class="wb-card-title inter-medium">{% block left-one-card-title %}{% endblock %}</h5>
+                <p class="card-text">{% block left-one-card-description %}{% endblock %}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="height:75vh;"id="workbase-second">
+      <div class="wb-right h-100 bg-light">
+        <div class="wb-right-row h-100">
+          <div class="wb-right-description h-100 bg-transparent">
+            <div class="card h-100" style="background-color: transparent; border: none;">
+              <div class="card-body">
+                <h5 class="wb-card-title inter-medium">{% block right-one-card-title %}{% endblock %}</h5>
+                <p class="card-text">{% block right-one-card-description %}{% endblock %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="wb-right-photo h-100 bg-light">
+            <img src="{% block right-one-photo %} {% endblock %}" alt="first-right-photo" class="wb-section-photo h-100">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="height:75vh;" id="workbase-third">
+      <div class="wb-left h-100 bg-light">
+        <div class="wb-left-row h-100">
+          <div class="wb-left-photo h-100 bg-light">
+            <img src="{% block left-two-photo %} {% endblock %}" alt="second-left-photo" class="wb-section-photo h-100">
+          </div>
+          <div class="wb-left-description h-100">
+            <div class="card h-100" style="background-color: transparent; border: none;">
+              <div class="card-body">
+                <h5 class="wb-card-title inter-medium">{% block left-two-card-title %}{% endblock %}</h5>
+                <p class="card-text">{% block left-two-card-description %}{% endblock %}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="height:75vh;" id="workbase-fourth">
+      <div class="wb-right h-100 bg-light">
+        <div class="wb-right-row h-100">
+          <div class="wb-right-description h-100 ">
+            <div class="card h-100" style="background-color: transparent; border: none;">
+              <div class="card-body">
+                <h5 class="wb-card-title inter-medium">{% block right-two-card-title %}{% endblock %}</h5>
+                <p class="card-text">{% block right-two-card-description %}{% endblock %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="wb-right-photo h-100 bg-light">
+            <img src="{% block right-two-photo %} {% endblock %}" alt="first-right-photo" class="wb-section-photo h-100">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="height:10vh;" class="bg-light" id="workbase-fifth">
+      <div class="row">
+        <div class="bg-light d-flex justify-content-around">
+          <ul class="bg-light wb-bottom-links-ul">
+            <li><a href="{% block bottom-first-link-route %}{% endblock %}" class="wb-bottom-links">{% block bottom-first-link-innerhtml %}{% endblock %}</a></li>
+            <li><a href="{% block bottom-second-link-route %}{% endblock %}" class="wb-bottom-links">{% block bottom-second-link-innerhtml %}{% endblock %}</a></li>
+          </ul>
+      </div>
+      </div>
+      
+    </section>
+
+
+    {% block content%}
+
+    {% endblock %}
+
+    <style>
+        .social-linkedin-container { margin-top: 8px; position: relative; width: 40px; height: 40px;}
+        .social-linkedin-container img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;}
+        .social-linkedin-container:hover img { display: none;}
+        .social-linkedin-container:hover::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url("{% static 'img/icon/link-light.png' %}"); background-size: cover; background-position: center; opacity: 0; transition: opacity 0.7s ease; cursor: pointer;}
+        .social-linkedin-container:hover::before { opacity: 1; }
+
+        .social-pinterest-container { margin-top: 8px; position: relative; width: 40px; height: 40px;}
+        .social-pinterest-container img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;}
+        .social-pinterest-container:hover img { display: none;}
+        .social-pinterest-container:hover::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url("{% static 'img/icon/pin-light.png' %}"); background-size: cover; background-position: center; opacity: 0; transition: opacity 0.7s ease; cursor: pointer;}
+        .social-pinterest-container:hover::before { opacity: 1; }
+
+        .social-instagram-container { margin-top: 8px; position: relative; width: 40px; height: 40px;}
+        .social-instagram-container img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;}
+        .social-instagram-container:hover img { display: none;}
+        .social-instagram-container:hover::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url("{% static 'img/icon/insta-light.png' %}"); background-size: cover; background-position: center; opacity: 0; transition: opacity 0.7s ease; cursor: pointer;}
+        .social-instagram-container:hover::before { opacity: 1; }
+
+        .social-spotify-container { margin-top: 8px; position: relative; width: 40px; height: 40px;}
+        .social-spotify-container img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;}
+        .social-spotify-container:hover img { display: none;}
+        .social-spotify-container:hover::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url("{% static 'img/icon/spot-light.png' %}"); background-size: cover; background-position: center; opacity: 0; transition: opacity 0.7s ease; cursor: pointer;}
+        .social-spotify-container:hover::before { opacity: 1; }
+
+    </style>
+
+<footer class="bg-light" style="height:30vh; background-color: transparent; ">
+  <div class="row ms-5 me-5 align-content-center align-items-center h-100">
+    <div class="col-1 col-1-m col-1-s mt-3">
+      <a href="{% url 'index' %}"><img src="{% static 'img/newsenahsig.png' %}" width="160%"></a>
+    </div>
+    <div class="col-1 hide-m"></div>
+    <div class="col-4 col-4-m col-3-s mt-3 align-content-center align-items-center">
+      
+      <div class="">
+          <ul class="nav p-3 text-decoration-none">
+              <div class="ms-3"><li class="m-2"><a href="{% url 'contact' %}" class="btn btn-primary">Get in touch</a></li></div>
+              <a href="{% url 'linkedin' %}" target="_blank" class="social"><div class="ms-3 social-linkedin-container"><li class="m-2"><img src="{% static 'img/icon/link-dark.png' %}" alt="LinkedIn"></li></div></a>
+              <a href="{% url 'pinterest' %}"  class="social"><div class="ms-3 social-pinterest-container"><li class="m-2"><img width="40px" src="{% static 'img/icon/pin-dark.png' %}" alt="Pinterest"></li></div></a>
+              <a href="{% url 'instagram' %}" target="_blank" class="social"><div class="ms-3 social-instagram-container"><li class="m-2"><img width="40px" src="{% static 'img/icon/insta-dark.png' %}" alt="Instagram"></li></div></a>
+              <a href="{% url 'spotify' %}" target="_blank" class="social"><div class="ms-3 social-spotify-container"><li class="m-2"><img width="40px" src="{% static 'img/icon/spot-dark.png' %}" alt="Spotify"></li></div></a>
+            </ul>
+      </div>
+      
+  
+    </div>
+    <div class="col-2 hide-m"></div>
+    <div class="col-1 col-1-m hide-m mt-4">
+      <img src="{% static 'img/flower/flower1.png' %}" width="82" class="scribble" alt="flower one">
+    </div>
+    <div class="col-1 col-1-m hide-m mt-4">
+      <img src="{% static 'img/flower/flower2.png' %}" width="82" class="scribble" alt="flower two">
+    </div>
+    <div class="col-1 col-1-m hide-m mt-4">
+      <img src="{% static 'img/flower/flower3.png' %}" width="82" class="scribble" alt="flower three">
+    </div>
+    <div class="col-1 col-1-m hide-m mt-4">
+      <img src="{% static 'img/flower/flower4.png' %}" width="82" class="scribble" alt="flower four">
+    </div>
+  </div>
+</footer>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
